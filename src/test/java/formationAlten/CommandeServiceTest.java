@@ -36,12 +36,12 @@ public class CommandeServiceTest {
 	
 	@Test
 	void insert() {
-		//Client client = new Client("test", "test", null, "test", LocalDate.now(), Civilite.MME);
+		//Client client = new Client("test", "test", null, "test", LocalDate.now(), Civilite.MME); en attente de la fin du projet pour pouvoir intégrer un vrai client
 		
 		
 		Commande c = new Commande(LocalDate.now(), null);
 		
-		//Produit produit = new Produit("testprod", "testdesc", 33.33);
+		//Produit produit = new Produit("testprod", "testdesc", 33.33); 
 		Produit produit = produitService.getById(101L);
 		AchatKey achatKey = new AchatKey(c, produit);
 		Achat achat = new Achat(achatKey, 2);
