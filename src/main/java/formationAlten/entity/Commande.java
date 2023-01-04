@@ -50,6 +50,13 @@ public class Commande {
 		this.client = client;
 	}
 
+	public Commande(LocalDate date, Client client, List<Achat> achats) {
+		super();
+		this.date = date;
+		this.client = client;
+		this.achats = achats;
+	}
+
 	public Long getNumero() {
 		return numero;
 	}
@@ -99,14 +106,14 @@ public class Commande {
 		return true;
 	}
 
-	/*public Set<Produit> getAchats() {
+	public List<Achat> getAchats() {
 		return achats;
 	}
 
-	public void setAchats(Set<Produit> achats) {
+	public void setAchats(List<Achat> achats) {
 		this.achats = achats;
 	}
-	*/
+	
 	
 	
 
