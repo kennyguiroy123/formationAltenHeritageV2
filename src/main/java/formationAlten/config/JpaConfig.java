@@ -20,7 +20,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan("service")
+@ComponentScan("formationAlten.service")
 @EnableTransactionManagement
 @PropertySource("classpath:datasource.properties")
 @EnableJpaRepositories(basePackages = "formationAlten.repository")

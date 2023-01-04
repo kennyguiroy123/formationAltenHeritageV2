@@ -14,7 +14,7 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import formationAlten.config.JpaConfig;
 import formationAlten.entity.Client;
 import formationAlten.exception.ClientException;
-import service.ClientService;
+import formationAlten.service.ClientService;
 
 @SpringJUnitConfig(JpaConfig.class)
 @Transactional
