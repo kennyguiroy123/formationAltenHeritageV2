@@ -1,4 +1,4 @@
-package config;
+package formationAlten.config;
 
 import java.util.Properties;
 

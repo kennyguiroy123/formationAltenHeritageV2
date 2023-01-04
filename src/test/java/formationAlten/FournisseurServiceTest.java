@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-import config.JpaConfig;
+import formationAlten.config.JpaConfig;
 import formationAlten.entity.Adresse;
 import formationAlten.entity.Fournisseur;
 import formationAlten.exception.FournisseurException;

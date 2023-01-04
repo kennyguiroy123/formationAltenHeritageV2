@@ -9,7 +9,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-import config.JpaConfig;
+import formationAlten.config.JpaConfig;
 import formationAlten.entity.Fournisseur;
 import formationAlten.exception.FournisseurException;
 import formationAlten.repository.FournisseurRepository;
