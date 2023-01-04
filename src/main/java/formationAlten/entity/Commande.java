@@ -6,6 +6,7 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,7 +29,7 @@ public class Commande {
 	private Long numero;
 	@Column(name = "order_date")
 	private LocalDate date;
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "order_customer_id", foreignKey = @ForeignKey(name = "fk_order_customer_id"))
 	private Client client;
 	/*@ManyToMany
@@ -98,6 +99,15 @@ public class Commande {
 			return false;
 		return true;
 	}
+
+	public List<Achat> getAchats() {
+		return achats;
+	}
+
+	public void setAchats(List<Achat> achats) {
+		this.achats = achats;
+	}
+	
 
 	/*public Set<Produit> getAchats() {
 		return achats;

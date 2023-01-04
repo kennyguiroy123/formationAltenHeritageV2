@@ -10,6 +10,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -32,9 +33,17 @@ public class Client extends Compte {
 	@Column(name = "civility")
 	@Enumerated(EnumType.STRING)
 	private Civilite civilite;
-	@OneToMany(mappedBy = "client")
+	@OneToMany(mappedBy = "client",fetch = FetchType.LAZY)
 	private List<Commande> commandes;
 	
+	public List<Commande> getCommandes() {
+		return commandes;
+	}
+
+	public void setCommandes(List<Commande> commandes) {
+		this.commandes = commandes;
+	}
+
 	public Client() {
 		
 	}
