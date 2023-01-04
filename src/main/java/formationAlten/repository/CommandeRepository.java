@@ -24,7 +24,7 @@ public interface CommandeRepository extends JpaRepository<Commande, Long> {
 	@Modifying
 	@Transactional
 	@Query("update Commande c set c.client=null where c.client=:client")
-	void updateByReferentSetReferentToNull(@Param("client") Client client);
+	void updateByClient(@Param("client") Client client);
 	
 //	@Query("select c from Commande c left join Achat c.achats where c.id=:id") // pas de condition d'égalité avec requête JPQL il automatise grâce à la relation One to Many et Many to One avec le mapped By
 //	Optional<Commande> findByIdCommande(@Param("id")Long id);

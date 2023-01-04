@@ -48,9 +48,10 @@ public class ClientService {
 			
 			
 			Client client= getById(id);
-			achatRepository.updateByAchatKeySetAchatKeyToNull((Commande) client.getCommandes());
-			commandeRepository.updateByReferentSetReferentToNull(client);
 			
+			achatRepository.updateByAchatKeySetAchatKeyToNull((Commande) client.getCommandes());
+			commandeRepository.updateByClient(client);
+		
 			
 			clientRepository.delete(client);
 		}
