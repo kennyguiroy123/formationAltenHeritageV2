@@ -12,19 +12,16 @@ import formationAlten.entity.AchatKey;
 import formationAlten.entity.Commande;
 
 public interface AchatRepository extends JpaRepository<Achat, AchatKey> {
-	@Modifying
-	@Transactional
-	@Query("delete Achat a where a.id.commande =: commande")
-	void deleteByAchats(@Param("commande")Commande commande);
 	
 	@Modifying
-    @Transactional
-    @Query("update Achat a set a.id.commande=null where a.id.commande=:commande")
-    void updateByAchatKeySetAchatKeyToNull(@Param("commande") Commande commande);
-//	@Modifying
-//	@Transactional
-//	@Query("update Achat a set a.id.commande=null where a.id.commande=:commande")
-//	void updateByAchatKeySetAchatKeyToNull(@Param("commande") Commande commande);
+	@Transactional
+	@Query("update Achat a set a.id.commande=null where a.id.commande=:commande")
+	void updateByAchatKeySetAchatKeyToNull(@Param("commande") Commande commande);
+
+	@Modifying
+	@Transactional
+	@Query("delete Achat a where a.id.commande=:commande")
+	void deleteByAchatKey(@Param("commande") Commande commande);
 	
 
 }
