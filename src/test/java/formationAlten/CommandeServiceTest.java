@@ -10,15 +10,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-import config.JpaConfig;
+import formationAlten.config.JpaConfig;
 import formationAlten.entity.Achat;
 import formationAlten.entity.AchatKey;
-import formationAlten.entity.Civilite;
-import formationAlten.entity.Client;
 import formationAlten.entity.Commande;
 import formationAlten.entity.Produit;
-import service.CommandeService;
-import service.ProduitService;
+import formationAlten.service.CommandeService;
+import formationAlten.service.ProduitService;
+
 
 @SpringJUnitConfig(JpaConfig.class)
 public class CommandeServiceTest {
