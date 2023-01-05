@@ -26,7 +26,7 @@ public class CommandeServiceTest {
 	@Autowired
 	private CommandeService commandeService;
 	@Autowired
-	private ProduitService produitService;
+	private ProduitService  produitService;
 	
 	
 	@Test
